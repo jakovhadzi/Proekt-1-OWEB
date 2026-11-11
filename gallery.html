@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Travel Planner App</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <link rel="icon" href="travel.png">
+    </head>
+    <body class="d-flex flex-column min-vh-100">
+        <header class="container-fluid bg-success sticky-top shadow">
+            <div class="d-flex align-items-center justify-content-between py-2 px-1">
+                <a href="./index.html" class="d-flex align-items-center text-light text-decoration-none">
+                    <img src="travel.png" alt="Travel Planner App" class="img-thumbnail mr-2" width="28" height="28">
+                    <h6 class="mb-0">Travel Planner App</h6>
+                </a>
+
+                <span class="text-muted mx-auto">Plan your next trip</span>
+
+                <div class="d-flex align-items-center">
+                    <div id="guestButtons">
+                        <a class="btn btn-secondary ml-auto py-1" href="./login.html">Sign in</a>
+                        <a class="btn btn-primary ml-1 py-1" href="./signup.html">Sign up</a>
+                    </div>
+                    <div id="userInterface" class="dropdown d-none">
+                        <button id="userMessage" class="btn btn-outline-light dropdown-toggle" type="button" 
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <button id="logoutButton" class="dropdown-item" type="button">Log out</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom shadow-sm px-4">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav nav-tabs nav-fill">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active disabled font-weight-bold text-success" href="./gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                            Destinations
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="./destinations.html">Browse</a>
+                            <hr class="my-1">
+                            <a class="dropdown-item" href="./destinations.html#GreeceDiv">Greece</a>
+                            <a class="dropdown-item" href="./destinations.html#SloveniaDiv">Slovenia</a>
+                            <a class="dropdown-item" href="./destinations.html#ItalyDiv">Italy</a>
+                            <a class="dropdown-item" href="./destinations.html#SpainDiv">Spain</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="container my-4">
+            <h2 class="font-weight-bold text-success mb-4">Gallery</h2>
+
+            <div id="Greece" class="mb-5">
+                <h3 class="font-weight-bold border-bottom rounded pb-1 mb-4">Greece</h3>
+
+                <div>
+                    <h5 class="font-weight-bold text-success mb-3">Athens</h5>
+                    <details class="border-bottom border-left border-success p-3">
+                        <summary class="font-weight-bold">Athens Photos</summary>
+                        <div class="row mt-3">
+                            <div class="col-3 mb-3">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="images/greece/athens.jpg" class="card-img-top" alt="Athens">
+                                    <div class="card-body">
+                                        <h6 class="card-title mb-0">Athens</h6>
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-end align-items-center py-2">
+                                        <button id="likeBtnGreeceAthens1" class="btn btn-sm btn-outline-success mr-1">👍<span id="likesGreeceAthens1">0</span></button>
+                                        <button id="dislikeBtnGreeceAthens1" class="btn btn-sm btn-outline-danger mr-1">👎<span id="dislikesGreeceAthens1">0</span></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3 mb-3">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="images/greece/parthenon.jpg" class="card-img-top" alt="Athens">
+                                    <div class="card-body">
+                                        <h6 class="card-title mb-0">Parthenon</h6>
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-end align-items-center py-2">
+                                        <button id="likeBtnGreeceAthens2" class="btn btn-sm btn-outline-success mr-1">👍<span id="likesGreeceAthens2">0</span></button>
+                                        <button id="dislikeBtnGreeceAthens2" class="btn btn-sm btn-outline-danger mr-1">👎<span id="dislikesGreeceAthens2">0</span></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3 mb-3">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="images/greece/odeon.jpg" class="card-img-top" alt="Athens">
+                                    <div class="card-body">
+                                        <h6 class="card-title mb-0">Odeon</h6>
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-end align-items-center py-2">
+                                        <button id="likeBtnGreeceAthens3" class="btn btn-sm btn-outline-success mr-1">👍<span id="likesGreeceAthens3">0</span></button>
+                                        <button id="dislikeBtnGreeceAthens3" class="btn btn-sm btn-outline-danger mr-1">👎<span id="dislikesGreeceAthens3">0</span></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3 mb-3">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="images/greece/hephaestus.jpg" class="card-img-top" alt="Athens">
+                                    <div class="card-body">
+                                        <h6 class="card-title mb-0">Hephaestus</h6>
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-end align-items-center py-2">
+                                        <button id="likeBtnGreeceAthens4" class="btn btn-sm btn-outline-success mr-1">👍<span id="likesGreeceAthens4">0</span></button>
+                                        <button id="dislikeBtnGreeceAthens4" class="btn btn-sm btn-outline-danger mr-1">👎<span id="dislikesGreeceAthens4">0</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <div id="Slovenia" class="mb-5">
+                <h3 class="font-weight-bold border-bottom rounded pb-1 mb-4">Slovenia</h3>
+
+                <div>
+                    <h5 class="font-weight-bold text-success mb-3">Ljubljana</h5>
+                    <details class="border-bottom border-left border-success p-3">
+                        <summary class="font-weight-bold">Ljubljana Photos</summary>
+                        <div class="row mt-3">
+                            <div class="col-3 mb-3">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="images/slovenia/ljubljana.jpg" class="card-img-top" alt="Ljubljana">
+                                    <div class="card-body">
+                                        <h6 class="card-title mb-0">Ljubljana</h6>
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-end align-items-center py-2">
+                                        <button id="likeBtnSloveniaLjubljana1" class="btn btn-sm btn-outline-success mr-1">👍<span id="likesSloveniaLjubljana1">0</span></button>
+                                        <button id="dislikeBtnSloveniaLjubljana1" class="btn btn-sm btn-outline-danger mr-1">👎<span id="dislikesSloveniaLjubljana1">0</span></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3 mb-3">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="images/slovenia/ljubljanaCastle.jpg" class="card-img-top" alt="Ljubljana Castle">
+                                    <div class="card-body">
+                                        <h6 class="card-title mb-0">Castle</h6>
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-end align-items-center py-2">
+                                        <button id="likeBtnSloveniaLjubljana2" class="btn btn-sm btn-outline-success mr-1">👍<span id="likesSloveniaLjubljana2">0</span></button>
+                                        <button id="dislikeBtnSloveniaLjubljana2" class="btn btn-sm btn-outline-danger mr-1">👎<span id="dislikesSloveniaLjubljana2">0</span></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3 mb-3">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="images/slovenia/tripleBridge.jpg" class="card-img-top" alt="Triple Bridge">
+                                    <div class="card-body">
+                                        <h6 class="card-title mb-0">Triple Bridge</h6>
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-end align-items-center py-2">
+                                        <button id="likeBtnSloveniaLjubljana3" class="btn btn-sm btn-outline-success mr-1">👍<span id="likesSloveniaLjubljana3">0</span></button>
+                                        <button id="dislikeBtnSloveniaLjubljana3" class="btn btn-sm btn-outline-danger mr-1">👎<span id="dislikesSloveniaLjubljana3">0</span></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3 mb-3">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="images/slovenia/ljubljanaPark.jpg" class="card-img-top" alt="Tivoli Park">
+                                    <div class="card-body">
+                                        <h6 class="card-title mb-0">Tivoli Park</h6>
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-end align-items-center py-2">
+                                        <button id="likeBtnSloveniaLjubljana4" class="btn btn-sm btn-outline-success mr-1">👍<span id="likesSloveniaLjubljana4">0</span></button>
+                                        <button id="dislikeBtnSloveniaLjubljana4" class="btn btn-sm btn-outline-danger mr-1">👎<span id="dislikesSloveniaLjubljana4">0</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <div id="Italy" class="mb-5">
+                <h3 class="font-weight-bold border-bottom rounded pb-1 mb-4">Italy</h3>
+
+                <div>
+                    <h5 class="font-weight-bold text-success mb-3">Rome</h5>
+                    <details class="border-bottom border-left border-success p-3">
+                        <summary class="font-weight-bold">Rome Photos</summary>
+                        <div class="row mt-3">
+                            <div class="col-3 mb-3">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="images/italy/rome1.jpg" class="card-img-top" alt="Rome">
+                                    <div class="card-body">
+                                        <h6 class="card-title mb-0">Rome</h6>
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-end align-items-center py-2">
+                                        <button id="likeBtnItalyRome1" class="btn btn-sm btn-outline-success mr-1">👍<span id="likesItalyRome1">0</span></button>
+                                        <button id="dislikeBtnItalyRome1" class="btn btn-sm btn-outline-danger mr-1">👎<span id="dislikesItalyRome1">0</span></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3 mb-3">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="images/italy/colosseum.jpg" class="card-img-top" alt="Colosseum">
+                                    <div class="card-body">
+                                        <h6 class="card-title mb-0">Colosseum</h6>
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-end align-items-center py-2">
+                                        <button id="likeBtnItalyRome2" class="btn btn-sm btn-outline-success mr-1">👍<span id="likesItalyRome2">0</span></button>
+                                        <button id="dislikeBtnItalyRome2" class="btn btn-sm btn-outline-danger mr-1">👎<span id="dislikesItalyRome2">0</span></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3 mb-3">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="images/italy/vatican.jpg" class="card-img-top" alt="Vatican">
+                                    <div class="card-body">
+                                        <h6 class="card-title mb-0">Vatican</h6>
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-end align-items-center py-2">
+                                        <button id="likeBtnItalyRome3" class="btn btn-sm btn-outline-success mr-1">👍<span id="likesItalyRome3">0</span></button>
+                                        <button id="dislikeBtnItalyRome3" class="btn btn-sm btn-outline-danger mr-1">👎<span id="dislikesItalyRome3">0</span></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3 mb-3">
+                                <div class="card shadow-sm">
+                                    <img src="images/italy/trevi.jpg" class="card-img-top" alt="Trevi Fountain">
+                                    <div class="card-body">
+                                        <h6 class="card-title mb-0">Trevi Fountain</h6>
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-end align-items-center py-2">
+                                        <button id="likeBtnItalyRome4" class="btn btn-sm btn-outline-success mr-1">👍<span id="likesItalyRome4">0</span></button>
+                                        <button id="dislikeBtnItalyRome4" class="btn btn-sm btn-outline-danger mr-1">👎<span id="dislikesItalyRome4">0</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <div id="Spain" class="mb-5">
+                <h3 class="font-weight-bold border-bottom rounded pb-1 mb-4">Spain</h3>
+
+                <div>
+                    <h5 class="font-weight-bold text-success mb-3">Madrid</h5>
+                    <details class="border-bottom border-left border-success p-3">
+                        <summary class="font-weight-bold">Madrid Photos</summary>
+                        <div class="row mt-3">
+                            <div class="col-3 mb-3">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="images/spain/madrid.jpg" class="card-img-top" alt="Madrid">
+                                    <div class="card-body">
+                                        <h6 class="card-title mb-0">Madrid</h6>
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-end align-items-center py-2">
+                                        <button id="likeBtnSpainMadrid1" class="btn btn-sm btn-outline-success mr-1">👍<span id="likesSpainMadrid1">0</span></button>
+                                        <button id="dislikeBtnSpainMadrid1" class="btn btn-sm btn-outline-danger mr-1">👎<span id="dislikesSpainMadrid1">0</span></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3 mb-3">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="images/spain/retiroPark.jpg" class="card-img-top" alt="Retiro Park">
+                                    <div class="card-body">
+                                        <h6 class="card-title mb-0">Retiro Park</h6>
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-end align-items-center py-2">
+                                        <button id="likeBtnSpainMadrid2" class="btn btn-sm btn-outline-success mr-1">👍<span id="likesSpainMadrid2">0</span></button>
+                                        <button id="dislikeBtnSpainMadrid2" class="btn btn-sm btn-outline-danger mr-1">👎<span id="dislikesSpainMadrid2">0</span></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3 mb-3">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="images/spain/palace.jpg" class="card-img-top" alt="Royal Palace">
+                                    <div class="card-body">
+                                        <h6 class="card-title mb-0">Royal Palace</h6>
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-end align-items-center py-2">
+                                        <button id="likeBtnSpainMadrid3" class="btn btn-sm btn-outline-success mr-1">👍<span id="likesSpainMadrid3">0</span></button>
+                                        <button id="dislikeBtnSpainMadrid3" class="btn btn-sm btn-outline-danger mr-1">👎<span id="dislikesSpainMadrid3">0</span></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3 mb-3">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="images/spain/plazaMayor.jpg" class="card-img-top" alt="Plaza Mayor">
+                                    <div class="card-body">
+                                        <h6 class="card-title mb-0">Plaza Mayor</h6>
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-end align-items-center py-2">
+                                        <button id="likeBtnSpainMadrid4" class="btn btn-sm btn-outline-success mr-1">👍<span id="likesSpainMadrid4">0</span></button>
+                                        <button id="dislikeBtnSpainMadrid4" class="btn btn-sm btn-outline-danger mr-1">👎<span id="dislikesSpainMadrid4">0</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <div class="row mt-5 borer-top pt-4">
+                <div class="col-12">
+                    <h4 class="font-weight-bold text-success mb-4">Comments (<span id="commentCnt">0</span>)</h4>
+                    <div id="commentsDiv">
+                        
+                    </div>
+
+                    <form id="addComment" class="mt-3">
+                        <div class="form-group">
+                            <label for="nameInput">Your name</label>
+                            <input id="nameInput" type="text" class="form-control" placeholder="Enter name..." required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="commentInput" class="form-control mb-3" rows="2" placeholder="Leave a comment..." required></textarea>
+                            <button id="submitComment" type="submit" class="btn btn-success">Post comment</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer class="d-flex align-items-center justify-content-between mt-auto py-3 bg-dark text-muted px-4">
+            <div id="survey" class="flex-fill text-left">
+                <a class="btn btn-link text-muted px-0" href="./survey.html">Take a survey</a>
+            </div>
+
+            <div class="border-right border-secondary py-3 mx-3"></div>
+
+            <div id="socials" class="flex-fill text-center">
+                <span class="mr-2">Socials:</span>
+                <a class="btn btn-outline-light btn-sm" href="https://www.facebook.com/jakov.graskoski" target="_blank">Facebook</a>
+                <a class="btn btn-outline-light btn-sm" href="https://www.instagram.com/grashkoskij/" target="_blank">Instagram</a>
+                <a class="btn btn-outline-light btn-sm" href="https://www.linkedin.com/in/jakov-hadzi-jordanov-795822355/" target="_blank">Linkedin</a>
+            </div>
+
+            <div class="border-right border-secondary py-3 mx-3"></div>
+
+            <div id="contact" class="flex-fill text-right">
+                <span class="d-block mb-1">Contact:</span>
+                <ul class="list-unstyled mb-0">
+                    <li><a href="mailto:placeholder@gmail.com" class="text-muted text-decoration-none">Email: placeholder@gmail.com</a></li>
+                    <li><a href="tel:+38912345678" class="text-muted text-decoration-none">Telephone: +389 12/345-678</a></li>
+                </ul>
+            </div>
+        </footer>
+
+
+        <script src="javaScript/header.js"></script>
+        <script src="javaScript/gallery.js"></script>
+        <script src="javaScript/blog.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Travel Planner App</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <link rel="icon" href="travel.png">
+    </head>
+    <body class="d-flex flex-column min-vh-100">
+        <header class="container-fluid bg-success sticky-top shadow">
+            <div class="d-flex align-items-center justify-content-between py-2 px-1">
+                <a href="./index.html" class="d-flex align-items-center text-light text-decoration-none">
+                    <img src="travel.png" alt="Travel Planner App" class="img-thumbnail mr-2" width="28" height="28">
+                    <h6 class="mb-0">Travel Planner App</h6>
+                </a>
+
+                <span class="text-muted mx-auto">Plan your next trip</span>
+
+                <div class="d-flex align-items-center">
+                    <div id="guestButtons">
+                        <a class="btn btn-secondary ml-auto py-1" href="./login.html">Sign in</a>
+                        <a class="btn btn-primary ml-1 py-1" href="./signup.html">Sign up</a>
+                    </div>
+                    <div id="userInterface" class="dropdown d-none">
+                        <button id="userMessage" class="btn btn-outline-light dropdown-toggle" type="button" 
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <button id="logoutButton" class="dropdown-item" type="button">Log out</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom shadow-sm px-4">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav nav-tabs nav-fill">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active disabled font-weight-bold text-success" href="./blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                            Destinations
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="./destinations.html">Browse</a>
+                            <hr class="my-1">
+                            <a class="dropdown-item" href="./destinations.html#GreeceDiv">Greece</a>
+                            <a class="dropdown-item" href="./destinations.html#SloveniaDiv">Slovenia</a>
+                            <a class="dropdown-item" href="./destinations.html#ItalyDiv">Italy</a>
+                            <a class="dropdown-item" href="./destinations.html#SpainDiv">Spain</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="container my-4">
+            <h2 class="font-weight-bold text-success mb-4">10 things you must see in Athens</h2>
+
+            <div id="blogTenThings" class="row">
+                <div class="col-12 mx-3 mb-4">
+                    <h5>1. Acropolis Museum</h5>
+                    <img src="images/greece/acropolis.jpg" class="img-fluid my-2" alt="Acropolis Museum">
+                    <p class="text-muted">One of the most important archaeological museums in the world.</p>
+                </div>
+                <div class="col-12 mx-3 mb-4">
+                    <h5>2. Odeon of Herodes Atticus</h5>
+                    <img src="images/greece/odeon.jpg" class="img-fluid my-2" alt="Odeon of Herodes Atticus">
+                    <p class="text-muted">The Odeon of Herodes Atticus is a stone Greek theatre structure 
+                                          located on the southwest slope of the Acropolis of Athens.<br>
+                                          The building was completed in AD 161 and then renovated in 1950.
+                    </p>
+                </div>
+                <div class="col-12 mx-3 mb-4">
+                    <h5>3. Acropolis and Parthenon</h5>
+                    <img src="images/greece/parthenon.jpg" class="img-fluid my-2" alt="Acropolis and Parthenon">
+                    <p class="text-muted">
+                        The Parthenon is a former temple on the Athenian Acropolis, that was dedicated to the goddess Athena.
+                    </p>
+                </div>
+                <div class="col-12 mx-3 mb-4">
+                    <h5>4. Temple of Hephaestus</h5>
+                    <img src="images/greece/hephaestus.jpg" class="img-fluid my-2" alt="Temple of Hephaestus">
+                    <p class="text-muted">
+                        The Temple of Hephaestus is a well-preserved Greek temple dedicated to Hephaestus.
+                    </p>
+                </div>
+                <div class="col-12 mx-3 mb-4">
+                    <h5>5. Roman Agora</h5>
+                    <img src="images/greece/agora.jpg" class="img-fluid my-2" alt="Roman Agora">
+                    <p class="text-muted">
+                        The Roman Agora is a ruined agora in Athens built in the Roman era to the east of the Ancient Agora and the north of the Acropolis.
+                    </p>
+                </div>
+                <div class="col-12 mx-3 mb-4">
+                    <h5>6. Hadrian's Library</h5>
+                    <img src="images/greece/hadrianLib.jpg" class="img-fluid my-2" alt="Hadrian's Library">
+                    <p class="text-muted">
+                        Hadrian's Library is the ruin of a monumental building created by Roman Emperor Hadrian in AD 132 on the north side of the Acropolis of Athens.
+                    </p>
+                </div>
+                <div class="col-12 mx-3 mb-4">
+                    <h5>7. Temple of Zeus</h5>
+                    <img src="images/greece/templeZeus.jpg" class="img-fluid my-2" alt="Temple of Zeus">
+                    <p class="text-muted">
+                        The Temple of Olympian Zeus, also known as the Olympieion, is a colossal temple in the centre of Athens, now in ruins.<br>
+                        It was dedicated to "Olympian" Zeus, a name originating from his position as head of the Olympian gods.
+                    </p>
+                </div>
+                <div class="col-12 mx-3 mb-4">
+                    <h5>8. National garden of Athens</h5>
+                    <img src="images/greece/gardenAthens.jpg" class="img-fluid my-2" alt="National garden of Athens">
+                    <p class="text-muted">
+                        The National Garden is a public park of 15.5 hectares in the center of the Greek capital, Athens
+                    </p>
+                </div>
+                <div class="col-12 mx-3 mb-4">
+                    <h5>9. Kerameikos</h5>
+                    <img src="images/greece/kerameikos.jpg" class="img-fluid my-2" alt="Kerameikos">
+                    <p class="text-muted">
+                        Kerameikos is an area of Athens, located to the northwest of the Acropolis, which includes an extensive area both within and outside the ancient city walls, 
+                        on both sides of the Dipylon Gate and by the banks of the Eridanos River.
+                    </p>
+                </div>
+                <div class="col-12 mx-3 mb-4">
+                    <h5>10. Panathenaic Stadium</h5>
+                    <img src="images/greece/panathenaicStadium.jpg" class="img-fluid my-2" alt="Panathenaic Stadium">
+                    <p class="text-muted">
+                        The Panathenaic Stadium is a multi-purpose stadium in Athens, Greece. It is the only stadium in the world built entirely of marble.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <h4 class="font-weight-bold text-success mb-4">Comments (<span id="commentCnt">0</span>)</h4>
+                    <div id="commentsDiv">
+                        
+                    </div>
+
+                    <form id="addComment" class="mt-3">
+                        <div class="form-group">
+                            <label for="nameInput">Your name</label>
+                            <input id="nameInput" type="text" class="form-control" placeholder="Enter name..." required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="commentInput" class="form-control mb-3" rows="2" placeholder="Leave a comment..." required></textarea>
+                            <button id="submitComment" type="submit" class="btn btn-success">Post comment</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer class="d-flex align-items-center justify-content-between mt-auto py-3 bg-dark text-muted px-4">
+            <div id="survey" class="flex-fill text-left">
+                <a class="btn btn-link text-muted px-0" href="./survey.html">Take a survey</a>
+            </div>
+
+            <div class="border-right border-secondary py-3 mx-3"></div>
+
+            <div id="socials" class="flex-fill text-center">
+                <span class="mr-2">Socials:</span>
+                <a class="btn btn-outline-light btn-sm" href="https://www.facebook.com/jakov.graskoski" target="_blank">Facebook</a>
+                <a class="btn btn-outline-light btn-sm" href="https://www.instagram.com/grashkoskij/" target="_blank">Instagram</a>
+                <a class="btn btn-outline-light btn-sm" href="https://www.linkedin.com/in/jakov-hadzi-jordanov-795822355/" target="_blank">Linkedin</a>
+            </div>
+
+            <div class="border-right border-secondary py-3 mx-3"></div>
+
+            <div id="contact" class="flex-fill text-right">
+                <span class="d-block mb-1">Contact:</span>
+                <ul class="list-unstyled mb-0">
+                    <li><a href="mailto:placeholder@gmail.com" class="text-muted text-decoration-none">Email: placeholder@gmail.com</a></li>
+                    <li><a href="tel:+38912345678" class="text-muted text-decoration-none">Telephone: +389 12/345-678</a></li>
+                </ul>
+            </div>
+        </footer>
+
+
+        <script src="javaScript/header.js"></script>
+        <script src="javaScript/blog.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

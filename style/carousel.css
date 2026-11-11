@@ -1,0 +1,11 @@
+#carouselDestinations img {
+    height: 600px;
+    width: 1200px;
+}
+
+.carousel-text {
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
